@@ -1,5 +1,6 @@
 echo "Recuperation sur le serveur.."
 cd /var/www/html/ateliers
+rm -rf var/*
 set +e
 git pull
 set -e

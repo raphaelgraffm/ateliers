@@ -1,0 +1,5 @@
+# Parametres pour la localisation de node
+parameters:
+    node_location: /usr/local/bin/node
+    node_libraries: [/usr/local/lib/node_modules]
+
