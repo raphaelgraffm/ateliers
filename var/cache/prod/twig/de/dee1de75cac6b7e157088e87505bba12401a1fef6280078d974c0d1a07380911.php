@@ -10,7 +10,7 @@ class __TwigTemplate_e1f75e01ee19d259fec13b1647bb24e65795e8a1d7d88817d85d09e07c7
         // line 1
         $this->parent = $this->loadTemplate("AtelierCoreBundle::layout.html.twig", "AtelierCoreBundle:Core:index.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'main' => array($this, 'block_main'),
         );
     }
 
@@ -25,10 +25,17 @@ class __TwigTemplate_e1f75e01ee19d259fec13b1647bb24e65795e8a1d7d88817d85d09e07c7
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_main($context, array $blocks = array())
     {
         // line 4
-        echo "\t<p>
+        echo "
+\t<h1 class=\"main-title\">
+\t\tLes ateliers écriture <br/> 
+\t\t<span style=\"font-size:80%\">de</span> <br/> 
+\t\t<span style=\"font-size:200%\">Marie-Anne</span>
+\t</h1>
+
+\t<p>
 \t\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 \t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -94,7 +101,14 @@ class __TwigTemplate_e1f75e01ee19d259fec13b1647bb24e65795e8a1d7d88817d85d09e07c7
     {
         return "{% extends 'AtelierCoreBundle::layout.html.twig' %}
 
-{% block body %}
+{% block main %}
+
+\t<h1 class=\"main-title\">
+\t\tLes ateliers écriture <br/> 
+\t\t<span style=\"font-size:80%\">de</span> <br/> 
+\t\t<span style=\"font-size:200%\">Marie-Anne</span>
+\t</h1>
+
 \t<p>
 \t\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

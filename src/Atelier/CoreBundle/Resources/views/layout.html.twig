@@ -9,7 +9,7 @@
 		<title>Les ateliers d'écriture de Marie-Anne</title>
 		<meta name="description" content="TODO">
 		{% stylesheets '@AtelierCoreBundle/Resources/less/styles.less'
-			filter = 'less,cssrewrite,?scssphp'
+			filter = 'less,?scssphp'
 			output = 'css/styles.css'
 		%}
 			<link href="{{ asset_url }}" rel="stylesheet" media="screen" type="text/css"/>
@@ -17,7 +17,9 @@
 	</head>
 
 	<body>
-		{% block body %}{% endblock %}
+		<main>
+		  {% block main %}{% endblock %}
+		</main>
 	</body>
 
 </html>
