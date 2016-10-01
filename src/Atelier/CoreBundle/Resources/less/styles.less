@@ -45,23 +45,15 @@ main {
 	}
 }
 
-/*#papier_gauche {
-	#bordure();
-	width: @pg-width;
-	position: absolute;
-	left: 0;
-	top: @pg-offset;
-	background-image: 'svg/papier_gauche.svg';
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: cover;
-}*/
-
-svg#papier_gauche {
+#papier_gauche {
 	z-index: 1;
 	width: @pg-width;
 	height: @pg-height;
-	position: absolute;
+	position: fixed;
 	left: -0.1vw;
 	top: @pg-offset;
+	background-image: url(../svg/papier_gauche.svg);
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
