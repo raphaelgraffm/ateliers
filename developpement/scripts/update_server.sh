@@ -6,7 +6,7 @@ set -e
 echo "Fin de la recuperation sur le serveur"
 
 #Installation des dependances
-#php /var/www/html/ateliers/composer.phar update
+php /var/www/html/ateliers/composer.phar update
 
 #Mise a jour des caches
 echo "Mise à jour des caches.."
