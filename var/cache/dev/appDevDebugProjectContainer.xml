@@ -15,8 +15,8 @@
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
-      <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
+      <parameter key="AtelierCoreBundle">Atelier\CoreBundle\AtelierCoreBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -330,8 +330,8 @@
       <parameter>SwiftmailerBundle</parameter>
       <parameter>DoctrineBundle</parameter>
       <parameter>SensioFrameworkExtraBundle</parameter>
-      <parameter>AppBundle</parameter>
       <parameter>AsseticBundle</parameter>
+      <parameter>AtelierCoreBundle</parameter>
       <parameter>DebugBundle</parameter>
       <parameter>WebProfilerBundle</parameter>
       <parameter>SensioDistributionBundle</parameter>
@@ -567,7 +567,7 @@
                   <tag name="cache.pool"/>
                   <argument>JthhNgCwSR</argument>
                   <argument>0</argument>
-                  <argument>1LFz+sCc9LqyAlKFQpsmXA</argument>
+                  <argument>tmIDRYEK6J8KwH26I8XZIA</argument>
                   <argument>/Users/Raphael/Sites/ateliers/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -580,7 +580,7 @@
                   <tag name="cache.pool"/>
                   <argument>E47k6Wq-PD</argument>
                   <argument>0</argument>
-                  <argument>1LFz+sCc9LqyAlKFQpsmXA</argument>
+                  <argument>tmIDRYEK6J8KwH26I8XZIA</argument>
                   <argument>/Users/Raphael/Sites/ateliers/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -912,7 +912,7 @@
       <tag name="cache.pool"/>
       <argument>zx1r90MjA1</argument>
       <argument>0</argument>
-      <argument>1LFz+sCc9LqyAlKFQpsmXA</argument>
+      <argument>tmIDRYEK6J8KwH26I8XZIA</argument>
       <argument>/Users/Raphael/Sites/ateliers/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1665,7 +1665,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>57efcb02dbedf7.64099919</argument>
+            <argument>57efcf93ea7f47.89092325</argument>
           </service>
         </argument>
       </argument>
@@ -1799,7 +1799,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>57efcb02dbedf7.64099919</argument>
+            <argument>57efcf93ea7f47.89092325</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2008,8 +2008,8 @@
               <argument>SwiftmailerBundle</argument>
               <argument>DoctrineBundle</argument>
               <argument>SensioFrameworkExtraBundle</argument>
-              <argument>AppBundle</argument>
               <argument>AsseticBundle</argument>
+              <argument>AtelierCoreBundle</argument>
               <argument>DebugBundle</argument>
               <argument>WebProfilerBundle</argument>
               <argument>SensioDistributionBundle</argument>
@@ -2556,16 +2556,16 @@
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
-                  <argument>AppBundle</argument>
-                  <argument>/Users/Raphael/Sites/ateliers/app/Resources/AppBundle/views</argument>
+                  <argument>AsseticBundle</argument>
+                  <argument>/Users/Raphael/Sites/ateliers/app/Resources/AsseticBundle/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
-                  <argument>AppBundle</argument>
-                  <argument>/Users/Raphael/Sites/ateliers/src/AppBundle/Resources/views</argument>
+                  <argument>AsseticBundle</argument>
+                  <argument>/Users/Raphael/Sites/ateliers/vendor/symfony/assetic-bundle/Resources/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
@@ -2583,16 +2583,16 @@
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
-                  <argument>AsseticBundle</argument>
-                  <argument>/Users/Raphael/Sites/ateliers/app/Resources/AsseticBundle/views</argument>
+                  <argument>AtelierCoreBundle</argument>
+                  <argument>/Users/Raphael/Sites/ateliers/app/Resources/AtelierCoreBundle/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
-                  <argument>AsseticBundle</argument>
-                  <argument>/Users/Raphael/Sites/ateliers/vendor/symfony/assetic-bundle/Resources/views</argument>
+                  <argument>AtelierCoreBundle</argument>
+                  <argument>/Users/Raphael/Sites/ateliers/src/Atelier/CoreBundle/Resources/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
@@ -3134,6 +3134,10 @@
       <call method="addPath">
         <argument>/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/Raphael/Sites/ateliers/src/Atelier/CoreBundle/Resources/views</argument>
+        <argument>AtelierCore</argument>
       </call>
       <call method="addPath">
         <argument>/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

@@ -79,6 +79,5 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig',
-  '::base.html.twig' => '/Users/Raphael/Sites/ateliers/app/Resources/views/base.html.twig',
-  ':default:index.html.twig' => '/Users/Raphael/Sites/ateliers/app/Resources/views/default/index.html.twig',
+  'AtelierCoreBundle:Core:index.html.twig' => '/Users/Raphael/Sites/ateliers/src/Atelier/CoreBundle/Resources/views/Core/index.html.twig',
 );

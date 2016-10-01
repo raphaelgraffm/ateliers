@@ -79,6 +79,7 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig',
+  'AtelierCoreBundle:Core:index.html.twig' => '/Users/Raphael/Sites/ateliers/src/Atelier/CoreBundle/Resources/views/Core/index.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
   'WebProfilerBundle:Collector:config.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/config.html.twig',
@@ -110,6 +111,4 @@
   'WebProfilerBundle:Profiler:toolbar_js.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar_js.html.twig',
   'WebProfilerBundle:Profiler:toolbar_redirect.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar_redirect.html.twig',
   'WebProfilerBundle:Router:panel.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Router/panel.html.twig',
-  '::base.html.twig' => '/Users/Raphael/Sites/ateliers/app/Resources/views/base.html.twig',
-  ':default:index.html.twig' => '/Users/Raphael/Sites/ateliers/app/Resources/views/default/index.html.twig',
 );

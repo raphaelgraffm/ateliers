@@ -1,7 +1,4 @@
-#Vidage des caches
-echo "Vidage des caches.."
-php bin/console cache:clear --env=prod
-php bin/console cache:clear
+developpement/scripts/operations.sh
 
 #Envoi sur GitHub
 echo "Envoi sur GitHub.."
