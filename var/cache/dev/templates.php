@@ -80,6 +80,7 @@
   'DoctrineBundle:Collector:db.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'AtelierCoreBundle:Core:index.html.twig' => '/Users/Raphael/Sites/ateliers/src/Atelier/CoreBundle/Resources/views/Core/index.html.twig',
+  'AtelierCoreBundle::layout.html.twig' => '/Users/Raphael/Sites/ateliers/src/Atelier/CoreBundle/Resources/views/layout.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
   'WebProfilerBundle:Collector:config.html.twig' => '/Users/Raphael/Sites/ateliers/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/config.html.twig',
