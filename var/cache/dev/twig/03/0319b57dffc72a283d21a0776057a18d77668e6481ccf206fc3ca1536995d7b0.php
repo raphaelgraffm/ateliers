@@ -15,14 +15,14 @@ class __TwigTemplate_0daf7d6a2dbe8d77414f8cf70c901ce2cd7c82529f33d9d2eab872a4cf7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e20f14df8fe9ea382e353372aa3e54940cf1df7cf09fbbd6221d2e1f3aca9f0f = $this->env->getExtension("native_profiler");
-        $__internal_e20f14df8fe9ea382e353372aa3e54940cf1df7cf09fbbd6221d2e1f3aca9f0f->enter($__internal_e20f14df8fe9ea382e353372aa3e54940cf1df7cf09fbbd6221d2e1f3aca9f0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AtelierCoreBundle:Core:index.html.twig"));
+        $__internal_011843c0fa59f4677dfb79c5473cce86d345c463f9fb4686c653d1a4d81dc7b1 = $this->env->getExtension("native_profiler");
+        $__internal_011843c0fa59f4677dfb79c5473cce86d345c463f9fb4686c653d1a4d81dc7b1->enter($__internal_011843c0fa59f4677dfb79c5473cce86d345c463f9fb4686c653d1a4d81dc7b1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AtelierCoreBundle:Core:index.html.twig"));
 
         // line 1
         echo "Salut !
 ";
         
-        $__internal_e20f14df8fe9ea382e353372aa3e54940cf1df7cf09fbbd6221d2e1f3aca9f0f->leave($__internal_e20f14df8fe9ea382e353372aa3e54940cf1df7cf09fbbd6221d2e1f3aca9f0f_prof);
+        $__internal_011843c0fa59f4677dfb79c5473cce86d345c463f9fb4686c653d1a4d81dc7b1->leave($__internal_011843c0fa59f4677dfb79c5473cce86d345c463f9fb4686c653d1a4d81dc7b1_prof);
 
     }
 
