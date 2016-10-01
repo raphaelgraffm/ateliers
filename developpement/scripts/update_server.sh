@@ -12,3 +12,4 @@ php /var/www/html/composer.phar update
 #Mise a jour des caches
 echo "Mise à jour des caches.."
 php /var/www/html/ateliers/bin/console cache:clear --env=prod
+rm -rf /var/www/html/ateliers/var/*

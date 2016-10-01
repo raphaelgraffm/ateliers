@@ -4,3 +4,5 @@
 [2016-10-01 14:59:41] assetic.ERROR: The template "SecurityBundle:Collector:security.html.twig" contains an error: Unknown "profiler_dump" function in "SecurityBundle:Collector:security.html.twig" at line 180. [] []
 [2016-10-01 15:00:35] assetic.ERROR: The template "SecurityBundle:Collector:security.html.twig" contains an error: Unknown "profiler_dump" function in "SecurityBundle:Collector:security.html.twig" at line 180. [] []
 [2016-10-01 15:02:03] assetic.ERROR: The template "SecurityBundle:Collector:security.html.twig" contains an error: Unknown "profiler_dump" function in "SecurityBundle:Collector:security.html.twig" at line 180. [] []
+[2016-10-01 15:03:34] assetic.ERROR: The template "SecurityBundle:Collector:security.html.twig" contains an error: Unknown "profiler_dump" function in "SecurityBundle:Collector:security.html.twig" at line 180. [] []
+[2016-10-01 15:10:11] assetic.ERROR: The template "SecurityBundle:Collector:security.html.twig" contains an error: Unknown "profiler_dump" function in "SecurityBundle:Collector:security.html.twig" at line 180. [] []
