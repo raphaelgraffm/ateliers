@@ -1,4 +1,5 @@
 /* Main */
+/* Papier gauche */
 @font-face {
   font-family: Savoye LET;
   src: 'fonts/Savoye_LET.ttf';
@@ -443,6 +444,7 @@ html {
   font-size: 1.1vw;
 }
 main {
+  z-index: 0;
   width: 73vw;
   box-sizing: border-box;
   background-color: #FFFFFF;
@@ -470,4 +472,23 @@ main h1.main-title {
   padding: 0;
   font-weight: normal;
   font-style: normal;
+}
+/*#papier_gauche {
+	#bordure();
+	width: @pg-width;
+	position: absolute;
+	left: 0;
+	top: @pg-offset;
+	background-image: 'svg/papier_gauche.svg';
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}*/
+svg#papier_gauche {
+  z-index: 1;
+  width: 20vw;
+  height: 58vw;
+  position: absolute;
+  left: -0.1vw;
+  top: 3vw;
 }
