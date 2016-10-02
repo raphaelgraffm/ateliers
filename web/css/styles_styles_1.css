@@ -478,10 +478,10 @@ main h1.main-title {
 #papier_gauche {
   z-index: 1;
   width: 20vw;
-  height: 100vh;
+  height: 58vw;
   position: fixed;
   left: -0.1vw;
-  top: 3vw;
+  top: 5vh;
   background-image: url(../svg/papier_crayon.svg);
   background-position: top left;
   background-repeat: no-repeat;
@@ -519,6 +519,7 @@ main h1.main-title {
   #papier_gauche {
     position: absolute;
     width: 18vw;
+    top: 3vw;
   }
   #papier_droit {
     position: absolute;
@@ -535,6 +536,6 @@ main h1.main-title {
     font-size: 170%;
   }
   #papier_gauche {
-    top: 0vw;
+    top: 0;
   }
 }
