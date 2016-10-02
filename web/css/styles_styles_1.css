@@ -1,6 +1,7 @@
 /* Main */
 /* Papier gauche */
-/*@pg-height: 2.9*@pg-width;*/
+/* Papier droit */
+/* Orientation portrait */
 @font-face {
   font-family: Savoye LET;
   src: 'fonts/Savoye_LET.ttf';
@@ -474,6 +475,36 @@ main h1.main-title {
   font-weight: normal;
   font-style: normal;
 }
+@media screen and (orientation: portrait) {
+  html {
+    background-color: #FFFFFF;
+    font-size: 2vw;
+  }
+  main {
+    z-index: -2;
+    width: 100vw;
+    left: 0vw;
+  }
+  main h1.main-title {
+    font-size: 300%;
+  }
+  #papier_gauche {
+    position: absolute;
+  }
+  #papier_droit {
+    position: absolute;
+    width: 30vw;
+    height: 40vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 100%;
+  }
+  main h1.main-title {
+    font-size: 170%;
+  }
+}
 #papier_gauche {
   z-index: 1;
   width: 20vw;
@@ -481,8 +512,22 @@ main h1.main-title {
   position: fixed;
   left: -0.1vw;
   top: 3vw;
-  background-image: url(../svg/papier_gauche.svg);
+  background-image: url(../svg/papier_crayon.svg);
   background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#papier_droit {
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  width: 40vw;
+  height: 60vh;
+  position: fixed;
+  right: -0.1vw;
+  top: -0.2vw;
+  background-image: url(../svg/papier_droit.svg);
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
 }
