@@ -45,43 +45,6 @@ main {
 	}
 }
 
-@media screen and (orientation: portrait) {
-	html {
-		background-color: @main-background-color;
-		font-size: 2vw;
-	}
-
-	main {
-		z-index: -2;
-		width: @main-portrait-width;
-		left: unit((100 - @main-portrait-width)/2,vw);
-		h1.main-title {
-			font-size: 300%;
-		}
-	}
-
-	#papier_gauche {
-		position: absolute;
-	}
-
-	#papier_droit {
-		position: absolute;
-		width: @pd-portrait-width;
-		height: @pd-portrait-height;
-	}	
-}
-
-@media screen and (max-width: 500px) {
-	html {
-		font-size: 100%;
-	}
-	main {
-		h1.main-title {
-			font-size: 170%;
-		}
-	}
-}
-
 #papier_gauche {
 	z-index: 1;
 	width: @pg-width;
@@ -108,4 +71,73 @@ main {
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+/* Media Queries */
+
+@media screen and (orientation: portrait) {
+	html {
+		background-color: @main-portrait-background-color;
+		font-size: 2vw;
+	}
+
+	main {
+		z-index: -2;
+		background-color: @main-portrait-background-color;
+		width: @main-portrait-width;
+		left: unit((100 - @main-portrait-width)/2,vw);
+		h1.main-title {
+			font-size: 300%;
+		}
+	}
+
+	#papier_gauche {
+		position: absolute;
+		width: @pg-portrait-width;
+	}
+
+	#papier_droit {
+		position: absolute;
+		width: @pd-portrait-width;
+		height: @pd-portrait-height;
+		right: @pd-portrait-right-offset;
+	}	
+}
+
+@media screen and (orientation: portrait) and (max-width: 500px) {
+	html {
+		font-size: 100%;
+	}
+
+	main {
+		h1.main-title {
+			font-size: 170%;
+		}
+	}
+
+	#papier_gauche {
+		top: @pg-portrait-offset;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+	#papier_gauche {
+		top: @pg-portrait-offset + 7vw;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-width: 350px) {
+	html {
+		font-size: 80%;
+	}
+
+	main {
+		h1.main-title {
+			font-size: 150%;
+		}
+	}
+
+	#papier_gauche {
+		top: @pg-portrait-offset;
+	}
 }

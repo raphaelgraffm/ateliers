@@ -449,7 +449,7 @@ main {
   z-index: 0;
   width: 73vw;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: #FFFFFB;
   color: #4346AF;
   font-family: Athelas;
   font-size: 150%;
@@ -474,36 +474,6 @@ main h1.main-title {
   padding: 0;
   font-weight: normal;
   font-style: normal;
-}
-@media screen and (orientation: portrait) {
-  html {
-    background-color: #FFFFFF;
-    font-size: 2vw;
-  }
-  main {
-    z-index: -2;
-    width: 100vw;
-    left: 0vw;
-  }
-  main h1.main-title {
-    font-size: 300%;
-  }
-  #papier_gauche {
-    position: absolute;
-  }
-  #papier_droit {
-    position: absolute;
-    width: 30vw;
-    height: 40vw;
-  }
-}
-@media screen and (max-width: 500px) {
-  html {
-    font-size: 100%;
-  }
-  main h1.main-title {
-    font-size: 170%;
-  }
 }
 #papier_gauche {
   z-index: 1;
@@ -530,4 +500,57 @@ main h1.main-title {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
+}
+/* Media Queries */
+@media screen and (orientation: portrait) {
+  html {
+    background-color: #FFFFFB;
+    font-size: 2vw;
+  }
+  main {
+    z-index: -2;
+    background-color: #FFFFFB;
+    width: 100vw;
+    left: 0vw;
+  }
+  main h1.main-title {
+    font-size: 300%;
+  }
+  #papier_gauche {
+    position: absolute;
+    width: 18vw;
+  }
+  #papier_droit {
+    position: absolute;
+    width: 35vw;
+    height: 40vw;
+    right: -0.4vw;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 500px) {
+  html {
+    font-size: 100%;
+  }
+  main h1.main-title {
+    font-size: 170%;
+  }
+  #papier_gauche {
+    top: 8vw;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 400px) {
+  #papier_gauche {
+    top: 15vw;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 350px) {
+  html {
+    font-size: 80%;
+  }
+  main h1.main-title {
+    font-size: 150%;
+  }
+  #papier_gauche {
+    top: 8vw;
+  }
 }
