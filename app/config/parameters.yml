@@ -2,7 +2,7 @@
 parameters:
     database_host: 127.0.0.1
     database_port: 8889
-    database_name: "ateliers"
+    database_name: ateliers
     database_user: root
     database_password: root
     mailer_transport: smtp

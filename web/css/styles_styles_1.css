@@ -2,6 +2,7 @@
 /* Papier gauche */
 /* Papier droit */
 /* Orientation portrait */
+/* Formulaires */
 @font-face {
   font-family: Savoye LET;
   src: 'fonts/Savoye_LET.ttf';
@@ -13,6 +14,27 @@
   src: 'fonts/Athelas.ttf';
   font-weight: normal;
   font-style: normal;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
 }
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
@@ -500,6 +522,156 @@ main h1.main-title {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
+}
+/* Formulaires */
+form {
+  padding: 0;
+  margin-top: 3vw;
+}
+label,
+input {
+  display: inline-block;
+}
+.form_field {
+  box-sizing: content-box;
+}
+.form_field.text {
+  padding: 1vw;
+  padding-right: 0;
+  padding-left: 0;
+}
+.form_field.text label {
+  width: 31%;
+  text-align: right;
+  padding: 0;
+}
+.form_field.text input {
+  width: 64%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #4346AF;
+  transition: padding 0.3s, margin 0.3s;
+  float: right;
+}
+.form_field.text input:focus {
+  outline: none;
+  padding-bottom: 0.2vw;
+  margin-bottom: -0.2vw;
+}
+.form_field.checkbox {
+  padding: 1vw;
+  padding-right: 0;
+  padding-left: 0;
+  /* Cachons la case à cocher */
+  /* on prépare le label */
+  /* Aspect des checkboxes */
+  /* :before sert à créer la case à cocher */
+  /* Aspect général de la coche */
+  /* Aspect si "pas cochée" */
+  /* Aspect si "cochée" */
+  /* aspect désactivée */
+  /* styles de la coche (si cochée/désactivée) */
+  /* on style aussi le label quand désactivé */
+}
+.form_field.checkbox [type="checkbox"]:not(:checked),
+.form_field.checkbox [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.form_field.checkbox [type="checkbox"]:not(:checked) + label,
+.form_field.checkbox [type="checkbox"]:checked + label {
+  position: relative;
+  /* permet de positionner les pseudo-éléments */
+  padding: 0;
+  padding-left: 4.5vw;
+  /* fait un peu d'espace pour notre case à venir */
+  cursor: pointer;
+  /* affiche un curseur adapté */
+  float: right;
+  width: 64%;
+}
+.form_field.checkbox [type="checkbox"]:not(:checked) + label:before,
+.form_field.checkbox [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.4vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  /* dim. de la case */
+  border: 1px solid #4346AF;
+  background: transparent;
+}
+.form_field.checkbox [type="checkbox"]:not(:checked) + label:after,
+.form_field.checkbox [type="checkbox"]:checked + label:after {
+  content: '\2714';
+  position: absolute;
+  top: 0;
+  left: 0.2vw;
+  font-size: 1.5vw;
+  color: #4346AF;
+  transition: all .2s;
+  /* on prévoit une animation */
+}
+.form_field.checkbox [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  /* coche invisible */
+  transform: scale(0);
+  /* mise à l'échelle à 0 */
+}
+.form_field.checkbox [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  /* coche opaque */
+  transform: scale(1);
+  /* mise à l'échelle 1:1 */
+}
+.form_field.checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+.form_field.checkbox [type="checkbox"]:disabled:checked + label:before {
+  border-color: #bbb;
+}
+.form_field.checkbox [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+.form_field.checkbox [type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+.form_field.submit {
+  padding: 1vw;
+  padding-right: 0;
+  padding-left: 0;
+}
+.form_field.submit input {
+  position: relative;
+  top: 0;
+  transform: scale(1);
+  float: right;
+  background-color: #4346AF;
+  color: #FFFFFB;
+  border: 0;
+  width: 13vw;
+  height: 3vw;
+  transition: all 0.2s;
+}
+.form_field.submit input:hover {
+  top: -0.2vw;
+  transform: scale(1.02);
+}
+.form_field.submit input:active {
+  top: 0;
+  transform: scale(1);
+}
+#error {
+  background-color: #FD6D5D;
+  color: #FFFFFB;
+  padding: 0;
+  margin: 0;
+  padding-left: 1vw;
+  padding-top: 0.25vw;
+  padding-bottom: 0.25vw;
+  border-radius: 0.33333333vw;
+}
+#error ul li {
+  list-style-type: none;
 }
 /* Media Queries */
 @media screen and (orientation: portrait) {

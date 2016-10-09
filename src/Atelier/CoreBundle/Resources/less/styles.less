@@ -1,5 +1,6 @@
 @import 'parametres';
 @import 'fonts';
+@import 'helpers';
 
 @import (inline) '../vendor/css/normalize.css';
 
@@ -73,6 +74,10 @@ main {
 	background-size: contain;
 }
 
+/* Formulaires */
+
+@import 'forms';
+
 /* Media Queries */
 
 @media screen and (orientation: portrait) {
@@ -102,7 +107,7 @@ main {
 		width: @pd-portrait-width;
 		height: @pd-portrait-height;
 		right: @pd-portrait-right-offset;
-	}	
+	}
 }
 
 @media screen and (orientation: portrait) and (max-width: 500px) {
