@@ -523,6 +523,44 @@ main h1.main-title {
   background-repeat: no-repeat;
   background-size: contain;
 }
+/* Media Queries */
+@media screen and (orientation: portrait) {
+  html {
+    background-color: #FFFFFB;
+    font-size: 2vw;
+  }
+  main {
+    z-index: -2;
+    background-color: #FFFFFB;
+    width: 100vw;
+    left: 0vw;
+  }
+  main h1.main-title {
+    font-size: 300%;
+  }
+  #papier_gauche {
+    position: absolute;
+    width: 18vw;
+    top: 3vw;
+  }
+  #papier_droit {
+    position: absolute;
+    width: 35vw;
+    height: 40vw;
+    right: -0.4vw;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 500px) {
+  html {
+    font-size: 3vw;
+  }
+  main h1.main-title {
+    font-size: 170%;
+  }
+  #papier_gauche {
+    top: 0;
+  }
+}
 /* Formulaires */
 form {
   padding: 0;
@@ -648,8 +686,7 @@ input {
   background-color: #4346AF;
   color: #FFFFFB;
   border: 0;
-  width: 13vw;
-  height: 3vw;
+  padding: 1vw;
   transition: all 0.2s;
 }
 .form_field.submit input:hover {
@@ -673,41 +710,29 @@ input {
 #error ul li {
   list-style-type: none;
 }
-/* Media Queries */
 @media screen and (orientation: portrait) {
-  html {
-    background-color: #FFFFFB;
-    font-size: 2vw;
+  main h1.main-title.form-title {
+    font-size: 600%;
+    margin-top: 6vw;
+    margin-bottom: 23vw;
   }
-  main {
-    z-index: -2;
-    background-color: #FFFFFB;
-    width: 100vw;
-    left: 0vw;
+  .form_field.text,
+  .form_field.checkbox,
+  .form_field.submit {
+    display: block;
+    margin-bottom: 2vw;
   }
-  main h1.main-title {
-    font-size: 300%;
-  }
-  #papier_gauche {
-    position: absolute;
-    width: 18vw;
-    top: 3vw;
-  }
-  #papier_droit {
-    position: absolute;
-    width: 35vw;
-    height: 40vw;
-    right: -0.4vw;
+  .form_field.text label,
+  .form_field.text input {
+    display: block;
+    width: 100%;
+    text-align: left;
   }
 }
 @media screen and (orientation: portrait) and (max-width: 500px) {
-  html {
-    font-size: 3vw;
-  }
-  main h1.main-title {
-    font-size: 170%;
-  }
-  #papier_gauche {
-    top: 0;
+  main h1.main-title.form-title {
+    font-size: 400%;
+    margin-top: 5vw;
+    margin-bottom: 23vw;
   }
 }

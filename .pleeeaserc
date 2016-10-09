@@ -1,0 +1,5 @@
+{
+  "in": ["web/css/styles.css"],
+  "out": "web/css/styles2.css",
+  "browsers": ["> 1%","last 5 versions"]
+}

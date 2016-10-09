@@ -1,6 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<h1 class="main-title">Inscription</h1>
+<h1 class="main-title form-title">Inscription</h1>
 
 {% if not form.vars.valid %}
 <div id="error">
@@ -12,19 +12,19 @@
 {% endif %}
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    <div class="form_field text">
+    <div class="form_field text clearfix">
       {{ form_label(form.email) }}
       {{ form_widget(form.email) }}
     </div>
-    <div class="form_field text">
+    <div class="form_field text clearfix">
       {{ form_label(form.username) }}
       {{ form_widget(form.username) }}
     </div>
-    <div class="form_field text">
+    <div class="form_field text clearfix">
       {{ form_label(form.plainPassword.first) }}
       {{ form_widget(form.plainPassword.first) }}
     </div>
-    <div class="form_field text">
+    <div class="form_field text clearfix">
       {{ form_label(form.plainPassword.second) }}
       {{ form_widget(form.plainPassword.second) }}
     </div>

@@ -127,8 +127,9 @@ label, input {
         background-color: @main-text-color;
         color: @main-background-color;
         border: 0;
-        width: @form-submit-width;
-        height: @form-submit-height;
+        // width: @form-submit-width;
+        // height: @form-submit-height;
+        padding: @form-submit-padding;
         transition: all 0.2s;
     }
 
@@ -153,5 +154,34 @@ label, input {
     border-radius: @form-error-padding / 3;
     ul li {
         list-style-type: none;
+    }
+}
+
+@media screen and (orientation: portrait) {
+
+    main h1.main-title.form-title {
+        font-size: 600%;
+        margin-top: 6vw;
+        margin-bottom: 23vw;
+    }
+
+    .form_field.text, .form_field.checkbox, .form_field.submit {
+        display: block;
+        margin-bottom: 2vw;
+    }
+
+    .form_field.text label, .form_field.text input {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 500px) {
+
+    main h1.main-title.form-title {
+        font-size: 400%;
+        margin-top: 5vw;
+        margin-bottom: 23vw;
     }
 }
