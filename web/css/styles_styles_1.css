@@ -475,6 +475,9 @@ main h1.main-title {
   font-weight: normal;
   font-style: normal;
 }
+main a {
+  color: #4346AF;
+}
 #papier_gauche {
   z-index: 1;
   width: 20vw;
