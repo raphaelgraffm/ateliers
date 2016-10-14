@@ -1,127 +1,120 @@
 @import 'parametres';
 @import 'fonts';
 @import 'helpers';
-
 @import (inline) '../vendor/css/normalize.css';
 
 #bordure() {
-	border: 1px solid red;
+    border: 1px solid red;
 }
 
 html {
-	background-color: @background-color;
-	padding: 0;
-	margin: 0;
-	font-size: 1.1vw;
+    background-color: @background-color;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1vw;
 }
 
 main {
-	z-index: 0;
-	width: @main-width;
-	box-sizing: border-box;
-	background-color: @main-background-color;
-	color: @main-text-color;
-	font-family: Athelas;
-	font-size: 150%;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1.6;
-	text-align: justify;
-	position: relative;
-	left: unit((100 - @main-width)/2,vw);
-	top: @main-offset;
-	padding-left: @main-padding-sides;
-	padding-right: @main-padding-sides;
-	padding-top: @main-padding-top;
-	padding-bottom: @main-padding-top;
-	h1.main-title {
-		font-family: 'Savoye LET';
-		text-align: center;
-		font-size: 400%;
-		line-height: 1;
-		margin: 0;
-		padding: 0;
-		font-weight: normal;
-		font-style: normal;
-	}
+    z-index: 0;
+    width: @main-width;
+    box-sizing: border-box;
+    background-color: @main-background-color;
+    color: @main-text-color;
+    font-family: Athelas;
+    font-size: 150%;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: justify;
+    position: relative;
+    left: unit((100 - @main-width)/2,vw);
+    top: @main-offset;
+    padding: @main-padding-top @main-padding-sides;
+
+    h1.main-title {
+        font-family: 'Savoye LET';
+        text-align: center;
+        font-size: 400%;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        font-style: normal;
+    }
 }
 
 #papier_gauche {
-	z-index: 1;
-	width: @pg-width;
-	height: @pg-height;
-	position: fixed;
-	left: -0.1vw;
-	top: @pg-offset;
-	background-image: url(../svg/papier_crayon.svg);
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: contain;
+    z-index: 1;
+    width: @pg-width;
+    height: @pg-height;
+    position: fixed;
+    left: -0.1vw;
+    top: @pg-offset;
+    background-image: url("../svg/papier_crayon.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #papier_droit {
-	z-index: -1;
-	margin: 0;
-	padding: 0;
-	width: @pd-width;
-	height: @pd-height;
-	position: fixed;
-	right: -0.1vw;
-	top: @pd-offset;
-	background-image: url(../svg/papier_droit.svg);
-	background-position: top right;
-	background-repeat: no-repeat;
-	background-size: contain;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    width: @pd-width;
+    height: @pd-height;
+    position: fixed;
+    right: -0.1vw;
+    top: @pd-offset;
+    background-image: url("../svg/papier_droit.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-
 /* Media Queries */
-
 @media screen and (orientation: portrait) {
-	html {
-		background-color: @main-portrait-background-color;
-		font-size: 2vw;
-	}
+    html {
+        background-color: @main-portrait-background-color;
+        font-size: @main-portrait-font-size;
+    }
 
-	main {
-		z-index: -2;
-		background-color: @main-portrait-background-color;
-		width: @main-portrait-width;
-		left: unit((100 - @main-portrait-width)/2,vw);
-		h1.main-title {
-			font-size: 300%;
-		}
-	}
+    main {
+        z-index: -2;
+        background-color: @main-portrait-background-color;
+        width: @main-portrait-width;
+        left: unit((100 - @main-portrait-width)/2,vw);
 
-	#papier_gauche {
-		position: absolute;
-		width: @pg-portrait-width;
-		top: @pg-portrait-offset;
-	}
+        h1.main-title {
+            font-size: 300%;
+        }
+    }
 
-	#papier_droit {
-		position: absolute;
-		width: @pd-portrait-width;
-		height: @pd-portrait-height;
-		right: @pd-portrait-right-offset;
-	}
+    #papier_gauche {
+        position: absolute;
+        width: @pg-portrait-width;
+        top: @pg-portrait-offset;
+    }
+
+    #papier_droit {
+        position: absolute;
+        width: @pd-portrait-width;
+        height: @pd-portrait-height;
+        right: @pd-portrait-right-offset;
+    }
 }
-
 @media screen and (orientation: portrait) and (max-width: 500px) {
-	html {
-		font-size: 3vw;
-	}
+    html {
+        font-size: @main-phone-font-size;
+    }
 
-	main {
-		h1.main-title {
-			font-size: 170%;
-		}
-	}
+    main {
+        h1.main-title {
+            font-size: 170%;
+        }
+    }
 
-	#papier_gauche {
-		top: 0;
-	}
+    #papier_gauche {
+        top: 0;
+    }
 }
-
 /* Formulaires */
-
 @import 'forms';

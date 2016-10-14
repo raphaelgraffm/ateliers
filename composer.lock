@@ -2283,16 +2283,16 @@
     "packages-dev": [
         {
             "name": "sensio/generator-bundle",
-            "version": "v3.0.8",
+            "version": "v3.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "3c20d16512f37d2be159eca0411b99a141b90fa4"
+                "reference": "badc50258419227cd8f5ba123a8b16e96dce48b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/3c20d16512f37d2be159eca0411b99a141b90fa4",
-                "reference": "3c20d16512f37d2be159eca0411b99a141b90fa4",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/badc50258419227cd8f5ba123a8b16e96dce48b8",
+                "reference": "badc50258419227cd8f5ba123a8b16e96dce48b8",
                 "shasum": ""
             },
             "require": {
@@ -2331,7 +2331,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2016-09-06 01:30:19"
+            "time": "2016-10-09 19:13:58"
         },
         {
             "name": "symfony/phpunit-bridge",

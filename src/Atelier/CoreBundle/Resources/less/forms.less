@@ -3,7 +3,8 @@ form {
     margin-top: @form-margin-top;
 }
 
-label, input {
+input,
+label {
     display: inline-block;
 }
 
@@ -12,9 +13,7 @@ label, input {
 }
 
 .form_field.text {
-    padding: @form-field-padding;
-    padding-right: 0;
-    padding-left: 0;
+    padding: @form-field-padding 0;
 
     label {
         width: @form-label-text-width;
@@ -40,74 +39,74 @@ label, input {
 }
 
 .form_field.checkbox {
-    padding: @form-field-padding;
-    padding-right: 0;
-    padding-left: 0;
-
+    padding: @form-field-padding 0;
     /* Cachons la case à cocher */
-    [type="checkbox"]:not(:checked),
-    [type="checkbox"]:checked {
+    [type="checkbox"]:checked,
+    [type="checkbox"]:not(:checked) {
         position: absolute;
         left: -9999px;
     }
-
     /* on prépare le label */
-    [type="checkbox"]:not(:checked) + label,
-    [type="checkbox"]:checked + label {
-        position: relative; /* permet de positionner les pseudo-éléments */
-        padding: 0;
-        padding-left: @form-checkbox-dimension + @form-checkbox-space; /* fait un peu d'espace pour notre case à venir */
-        cursor: pointer;    /* affiche un curseur adapté */
+    [type="checkbox"]:checked + label,
+    [type="checkbox"]:not(:checked) + label {
+        position: relative;
+        /* permet de positionner les pseudo-éléments */
+        padding: 0 0 0 @form-checkbox-dimension + @form-checkbox-space;
+        /* fait un peu d'espace pour notre case à venir */
+        cursor: pointer;
+        /* affiche un curseur adapté */
         float: right;
         width: @form-input-text-width;
     }
-
     /* Aspect des checkboxes */
     /* :before sert à créer la case à cocher */
-    [type="checkbox"]:not(:checked) + label:before,
-    [type="checkbox"]:checked + label:before {
+    [type="checkbox"]:checked + label:before,
+    [type="checkbox"]:not(:checked) + label:before {
         content: '';
         position: absolute;
-        left:0; top: @form-checkbox-offset;
-        width: @form-checkbox-dimension; height: @form-checkbox-dimension; /* dim. de la case */
+        left: 0;
+        top: @form-checkbox-offset;
+        width: @form-checkbox-dimension;
+        height: @form-checkbox-dimension;
+        /* dim. de la case */
         border: 1px solid @main-text-color;
         background: transparent;
     }
-
     /* Aspect général de la coche */
-    [type="checkbox"]:not(:checked) + label:after,
-    [type="checkbox"]:checked + label:after {
+    [type="checkbox"]:checked + label:after,
+    [type="checkbox"]:not(:checked) + label:after {
         content: '\2714';
         position: absolute;
-        top: 0; left: 0.2vw;
+        top: 0;
+        left: 0.2vw;
         font-size: @form-checkbox-dimension;
         color: @main-text-color;
-        transition: all .2s; /* on prévoit une animation */
+        transition: all 0.2s;
+        /* on prévoit une animation */
     }
-
     /* Aspect si "pas cochée" */
     [type="checkbox"]:not(:checked) + label:after {
-        opacity: 0; /* coche invisible */
-        transform: scale(0); /* mise à l'échelle à 0 */
+        opacity: 0;
+        /* coche invisible */
+        transform: scale(0);
+        /* mise à l'échelle à 0 */
     }
-
     /* Aspect si "cochée" */
     [type="checkbox"]:checked + label:after {
-        opacity: 1; /* coche opaque */
-        transform: scale(1); /* mise à l'échelle 1:1 */
+        opacity: 1;
+        /* coche opaque */
+        transform: scale(1);
+        /* mise à l'échelle 1:1 */
     }
-
     /* aspect désactivée */
-    [type="checkbox"]:disabled:not(:checked) + label:before,
-    [type="checkbox"]:disabled:checked + label:before {
+    [type="checkbox"]:disabled:checked + label:before,
+    [type="checkbox"]:disabled:not(:checked) + label:before {
         border-color: #bbb;
     }
-
     /* styles de la coche (si cochée/désactivée) */
     [type="checkbox"]:disabled:checked + label:after {
         color: #999;
     }
-
     /* on style aussi le label quand désactivé */
     [type="checkbox"]:disabled + label {
         color: #aaa;
@@ -115,9 +114,7 @@ label, input {
 }
 
 .form_field.submit {
-    padding: @form-field-padding;
-    padding-right: 0;
-    padding-left: 0;
+    padding: @form-field-padding 0;
 
     input {
         position: relative;
@@ -147,41 +144,80 @@ label, input {
 #error {
     background-color: @form-error-background;
     color: @main-background-color;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     padding-left: @form-error-padding;
     padding-top: @form-error-padding / 4;
     padding-bottom: @form-error-padding / 4;
     border-radius: @form-error-padding / 3;
+
     ul li {
         list-style-type: none;
     }
 }
-
 @media screen and (orientation: portrait) {
-
     main h1.main-title.form-title {
         font-size: 600%;
         margin-top: 6vw;
         margin-bottom: 23vw;
     }
 
-    .form_field.text, .form_field.checkbox, .form_field.submit {
+    .form_field.checkbox,
+    .form_field.submit,
+    .form_field.text {
         display: block;
         margin-bottom: 2vw;
     }
 
-    .form_field.text label, .form_field.text input {
+    .form_field.text input,
+    .form_field.text label {
         display: block;
         width: 100%;
         text-align: left;
     }
+
+    .form_field.checkbox {
+        [type="checkbox"]:checked + label:after,
+        [type="checkbox"]:not(:checked) + label:after {
+            font-size: 1.5 * @main-portrait-font-size;
+        }
+
+        [type="checkbox"]:checked + label,
+        [type="checkbox"]:not(:checked) + label {
+            /* permet de positionner les pseudo-éléments */
+            padding: 0 0 0 (1.5 * @main-portrait-font-size + @form-checkbox-space);
+        }
+
+        [type="checkbox"]:checked + label:before,
+        [type="checkbox"]:not(:checked) + label:before {
+            width: 1.5 * @main-portrait-font-size;
+            height: 1.5 * @main-portrait-font-size;
+        }
+    }
 }
-
 @media screen and (orientation: portrait) and (max-width: 500px) {
-
     main h1.main-title.form-title {
         font-size: 400%;
         margin-top: 5vw;
         margin-bottom: 23vw;
+    }
+
+    .form_field.checkbox {
+        [type="checkbox"]:checked + label:after,
+        [type="checkbox"]:not(:checked) + label:after {
+            font-size: 1.5 * @main-phone-font-size;
+        }
+
+        [type="checkbox"]:checked + label,
+        [type="checkbox"]:not(:checked) + label {
+            /* permet de positionner les pseudo-éléments */
+            padding: 0 0 0 (1.5 * @main-phone-font-size + @form-checkbox-space);
+        }
+
+        [type="checkbox"]:checked + label:before,
+        [type="checkbox"]:not(:checked) + label:before {
+            width: 1.5 * @main-phone-font-size;
+            height: 1.5 * @main-phone-font-size;
+        }
     }
 }
